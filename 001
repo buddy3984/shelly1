@@ -1,0 +1,9 @@
+switchmode1 6
+
+rule1 on switch1#state do publish my/test %value% endon
+
+stat/light_painting_31
+
+rule1 on switch1#state=2 do publish cmnd/light_painting_31/power toggle endon
+
+cmnd/light_painting_31/dimmer + endon
